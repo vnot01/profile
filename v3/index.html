@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feri Febria Laksana — Lecturer · Researcher · Developer</title>
+  <meta name="description"
+    content="Personal profile of Feri Febria Laksana, S.Kom., M.Kom. — Lecturer, Researcher in IoT & Waste Management, and Full-Stack Developer." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Prevent FOUC: apply saved theme before render -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">FL<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!-- THEME TOGGLE -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="theme-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#research" class="mobile-link">Research</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#publications" class="mobile-link">Publications</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+      <div class="particle-field" id="particleField"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        PhD Candidate · Kasetsart University
+      </div>
+      <h1 class="hero-name">Feri Febria<br /><em>Laksana</em></h1>
+      <p class="hero-title">Lecturer · Researcher · Full-Stack Developer</p>
+      <p class="hero-subtitle">Building bridges between academia and technology — from IoT-powered waste management
+        systems to intelligent mobile applications that serve communities.</p>
+      <div class="hero-actions">
+        <a href="#research" class="btn-primary">View Research</a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Let's Connect
+        </a>
+        <a href="https://cloud.unu-jogja.ac.id/index.php/s/wAXSjYiNXZk7SB3" class="btn-cv" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years in Tech</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="9">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Research Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label">IPR Granted</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Books Published</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-avatar-wrap">
+      <div class="avatar-ring ring-3"></div>
+      <div class="avatar-ring ring-2"></div>
+      <div class="avatar-ring ring-1"></div>
+      <div class="avatar-card">
+        <div class="avatar-img-wrap">
+          <img src="../me-full.jpg" alt="Feri Febria Laksana" class="avatar-img" />
+        </div>
+        <div class="avatar-badge">
+          <span>🇮🇩</span> Yogyakarta, Indonesia
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 — About Me</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">I am a <strong>Lecturer, Researcher, and Full-Stack Developer</strong> who believes
+            technology should serve humanity — solving real problems from waste management to community health.</p>
+          <p>My journey started with Pascal and Delphi, then evolved to Java for Android development and PHP for web
+            services. When I saw Android emerge, I thought: <em>"This is the future of tech."</em> That instinct drove
+            me to master mobile development and build backend APIs that power real-world applications.</p>
+          <p>Currently pursuing a <strong>Ph.D. in Mechanical Engineering</strong> at Kasetsart University, Bangkok,
+            focusing on "Zero Waste Society" — combining my IoT expertise with sustainable engineering to create
+            technology that genuinely improves lives.</p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Full Name</span>
+              <span class="info-value">Feri Febria Laksana, S.Kom., M.Kom.</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Date of Birth</span>
+              <span class="info-value">February 25, 1989</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Birthplace</span>
+              <span class="info-value">Pekalongan, Central Java</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Functional Position</span>
+              <span class="info-value">Lektor (III/b)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">NIDN</span>
+              <span class="info-value">0525028902</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status</span>
+              <span class="info-value"><span class="status-dot"></span> PhD Candidate</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap">
+          <div class="about-card glass">
+            <div class="about-card-inner">
+              <div class="card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3>IoT & Engineering</h3>
+              <p>Developing smart systems — from smart recycle bins to automated guided vehicles using IoT and big data.
+              </p>
+            </div>
+          </div>
+          <div class="about-card glass">
+            <div class="about-card-inner">
+              <div class="card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3>Research & Academia</h3>
+              <p>Published researcher with Scopus-indexed papers, national grants, and intellectual property rights.</p>
+            </div>
+          </div>
+          <div class="about-card glass">
+            <div class="about-card-inner">
+              <div class="card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h3>Software Development</h3>
+              <p>Full-stack developer mastering Android, PHP, Java, and web technologies with over a decade of
+                experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 — Education</span>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card glass" data-aos>
+          <div class="edu-year">2024 — Present</div>
+          <div class="edu-body">
+            <div class="edu-icon">🎓</div>
+            <h3>S3 — Doctoral of Mechanical Engineering</h3>
+            <p class="edu-school">Kasetsart University, Bangkok, Thailand</p>
+            <p class="edu-desc">Faculty of Engineering, Concentration in "Zero Waste Society". Pursuing Ph.D. degree
+              with focus on sustainable waste management and biomass conversion technologies.</p>
+            <div class="edu-gpa">Ph.D. Candidate</div>
+          </div>
+        </div>
+        <div class="edu-card glass" data-aos>
+          <div class="edu-year">2015 — 2019</div>
+          <div class="edu-body">
+            <div class="edu-icon">📜</div>
+            <h3>S2 — Master of Informatics Engineering</h3>
+            <p class="edu-school">Universitas Atma Jaya Yogyakarta</p>
+            <p class="edu-desc">Concentration in "Innovation of Computational Science". Deepened expertise in
+              computational methods, information systems, and software engineering.</p>
+            <div class="edu-gpa">Academic Degree: M. Kom.</div>
+          </div>
+        </div>
+        <div class="edu-card glass" data-aos>
+          <div class="edu-year">2009 — 2014</div>
+          <div class="edu-body">
+            <div class="edu-icon">🏆</div>
+            <h3>S1 — Bachelor of Informatics Engineering</h3>
+            <p class="edu-school">Universitas Teknologi Yogyakarta</p>
+            <p class="edu-desc">Concentration in "Database". Built a strong foundation in programming, database
+              management, and software development methodologies.</p>
+            <div class="edu-gpa">Academic Degree: S. Kom.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Work Experience</span>
+        <h2 class="section-title">Career Path</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Researcher</h3>
+                <p class="job-company">Kasetsart University, Bangkok</p>
+              </div>
+              <span class="job-period">2025 — Present</span>
+            </div>
+            <p class="job-desc">Researcher in Waste & Biomass Conversion Laboratory (WBC-Laboratory), Department of
+              Mechanical Engineering, Faculty of Engineering. Conducting advanced research on sustainable
+              waste-to-energy conversion systems.</p>
+            <div class="job-tags">
+              <span class="tag">Research</span><span class="tag">IoT</span><span class="tag">Biomass</span><span
+                class="tag">Zero Waste</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Lecturer — Computer Engineering</h3>
+                <p class="job-company">Universitas Nahdlatul Ulama Yogyakarta</p>
+              </div>
+              <span class="job-period">2018 — Present</span>
+            </div>
+            <p class="job-desc">Permanent lecturer in Computer Engineering Undergraduate Program. Teaching, mentoring
+              students, leading research projects in IoT and waste management systems. Functional position: Lektor
+              (III/b).</p>
+            <div class="job-tags">
+              <span class="tag">Teaching</span><span class="tag">IoT</span><span class="tag">Research</span><span
+                class="tag">Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">IT Consultant — Project Controller</h3>
+                <p class="job-company">JMC IT Consultant</p>
+              </div>
+              <span class="job-period">Aug 2017 — Sep 2018</span>
+            </div>
+            <p class="job-desc">Ensuring development project work goes well, reporting to the Marketing Manager.
+              Collaborating with R&D, Production, and Clients to deliver quality IT solutions.</p>
+            <div class="job-tags">
+              <span class="tag">Project Management</span><span class="tag">Consulting</span><span class="tag">R&D</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">System Dev Manager / Android Programmer</h3>
+                <p class="job-company">CV. Threepreneur</p>
+              </div>
+              <span class="job-period">Jun 2013 — Jul 2016</span>
+            </div>
+            <p class="job-desc">Information Technology startup focusing on IT solutions and procurement. Successfully
+              managed projects for Government Agencies handling very large datasets (Big Data).</p>
+            <div class="job-tags">
+              <span class="tag">Android</span><span class="tag">Big Data</span><span class="tag">Management</span><span
+                class="tag">Government</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Freelancer</h3>
+              </div>
+              <span class="job-period">Jul 2012 — Present</span>
+            </div>
+            <p class="job-desc">Leading a personal team serving both individual and group requests. Specializing in
+              complex work areas with limited resources, consistently delivering on time.</p>
+            <div class="job-tags">
+              <span class="tag">Freelance</span><span class="tag">Full-Stack</span><span class="tag">Mobile</span><span
+                class="tag">Web</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & PROJECTS -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 — Research & Projects</span>
+        <h2 class="section-title">Research Portfolio</h2>
+      </div>
+      <div class="research-grid">
+
+        <div class="research-card glass featured" data-aos>
+          <div class="research-badge">National Grant</div>
+          <div class="research-year">2023</div>
+          <h3>Smart Recycle Bin "MySmartRecycleBin"</h3>
+          <p>Development of IoT-based smart trash can with Big Data integration for waste management supporting
+            sustainable development.</p>
+          <div class="research-role">
+            <span class="role-badge leader">Leader / Main Researcher</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">IoT</span><span class="tag">Big Data</span><span class="tag">Sustainability</span>
+          </div>
+        </div>
+
+        <div class="research-card glass" data-aos>
+          <div class="research-badge">National Grant</div>
+          <div class="research-year">2022</div>
+          <h3>Waste Management Information System (SIPaH)</h3>
+          <p>Applying Big Data Technology and Prototyping Methods for comprehensive waste management.</p>
+          <div class="research-role">
+            <span class="role-badge leader">Leader / Main Researcher</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Big Data</span><span class="tag">Prototyping</span><span class="tag">Information
+              System</span>
+          </div>
+        </div>
+
+        <div class="research-card glass" data-aos>
+          <div class="research-badge">National Grant</div>
+          <div class="research-year">2022</div>
+          <h3>Supply Chain + IoT for Waste Management</h3>
+          <p>Application of Supply Chain Management and Internet of Things in a Sustainable Waste Management System.</p>
+          <div class="research-role">
+            <span class="role-badge colead">Co-Leader & Developer</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">SCM</span><span class="tag">IoT</span><span class="tag">Sustainability</span>
+          </div>
+        </div>
+
+        <div class="research-card glass" data-aos>
+          <div class="research-badge">National Grant</div>
+          <div class="research-year">2023</div>
+          <h3>Robotics in Logistics Automation</h3>
+          <p>Optimizing the Potential of Robotics in Logistics Automation Through Downstreaming Expertise.</p>
+          <div class="research-role">
+            <span class="role-badge leader">Leader / Main Researcher</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Robotics</span><span class="tag">AGV</span><span class="tag">Logistics</span>
+          </div>
+        </div>
+
+        <div class="research-card glass" data-aos>
+          <div class="research-badge">Community Service</div>
+          <div class="research-year">2023</div>
+          <h3>Smart Waste Scales — Mataram Fort Park</h3>
+          <p>Integrated smart waste weighing system in Pleret Village to improve environmental and community health.</p>
+          <div class="research-role">
+            <span class="role-badge colead">Co-Leader</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Smart Scales</span><span class="tag">Community</span><span class="tag">Health</span>
+          </div>
+        </div>
+
+        <div class="research-card glass" data-aos>
+          <div class="research-badge">Community Service</div>
+          <div class="research-year">2023</div>
+          <h3>Prototype AGV for Warehouse</h3>
+          <p>Development of Prototype Automated Guided Vehicles for the Warehouse Sector at PT Stechoq Robotika
+            Indonesia.</p>
+          <div class="research-role">
+            <span class="role-badge leader">Leader / Main Researcher</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag">AGV</span><span class="tag">Robotics</span><span class="tag">Warehouse</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 — Skills & Expertise</span>
+        <h2 class="section-title">Tech Stack & Competencies</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">PHP / Laravel</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Java / Android</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">JavaScript / Web</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Pascal / Delphi</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🔧</div>
+            <h3>IoT & Engineering</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">Arduino / ESP32</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">RFID / Sensors</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Embedded Systems</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🗄️</div>
+            <h3>Database & Backend</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">MySQL / MariaDB</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:92%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">RESTful API Design</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Big Data Technologies</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Server Administration</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass" data-aos>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🧠</div>
+            <h3>Research & Soft Skills</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-name">Research Methodology</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Academic Writing</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Project Management</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:82%"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Critical Thinking</span>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS & IPR -->
+  <section class="section section-alt" id="publications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 — Publications & IPR</span>
+        <h2 class="section-title">Academic Output</h2>
+      </div>
+
+      <!-- Publication Metrics -->
+      <div class="metrics-bar">
+        <a href="https://scholar.google.com/citations?user=fzIebPMAAAAJ" target="_blank" class="metric-item glass">
+          <span class="metric-icon">📊</span>
+          <div>
+            <span class="metric-label">Google Scholar</span>
+            <span class="metric-value">fzIebPMAAAAJ</span>
+          </div>
+        </a>
+        <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6740993" target="_blank" class="metric-item glass">
+          <span class="metric-icon">📑</span>
+          <div>
+            <span class="metric-label">SINTA ID</span>
+            <span class="metric-value">6740993</span>
+          </div>
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57452778500" target="_blank"
+          class="metric-item glass">
+          <span class="metric-icon">🔬</span>
+          <div>
+            <span class="metric-label">Scopus ID</span>
+            <span class="metric-value">57452778500</span>
+          </div>
+        </a>
+        <a href="https://orcid.org/0000-0001-9168-8020" target="_blank" class="metric-item glass">
+          <span class="metric-icon">🆔</span>
+          <div>
+            <span class="metric-label">ORCID</span>
+            <span class="metric-value">0000-0001-9168-8020</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Scopus Publications -->
+      <div class="pub-section">
+        <h3 class="pub-section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          Scopus-Indexed Publications
+        </h3>
+        <div class="pub-list">
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <span class="pub-index scopus">Scopus Q3</span>
+              <h4>Possible values of lattice constant of silicene growth on substrate: Density functional calculation
+              </h4>
+              <p class="pub-role">Co-Author</p>
+            </div>
+          </div>
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2022</div>
+            <div class="pub-body">
+              <span class="pub-index scopus">Scopus Q3</span>
+              <h4>Users' perceptions of the "My Medicine" mobile app usability</h4>
+              <p class="pub-role">Co-Author & Developer</p>
+            </div>
+          </div>
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2022</div>
+            <div class="pub-body">
+              <span class="pub-index scopus">Scopus Q4</span>
+              <h4>Development of a Survey Instrument Mobile App to Determine the Map Location of a Drugstore</h4>
+              <p class="pub-role">Co-Author & Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Books -->
+      <div class="pub-section">
+        <h3 class="pub-section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          Books
+        </h3>
+        <div class="pub-list">
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <span class="pub-index book">Reference Book</span>
+              <h4>Concepts of Artificial Intelligence</h4>
+              <p class="pub-role">Author · ISBN: 978-623-8708-03-1</p>
+            </div>
+          </div>
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <span class="pub-index book">Book Chapter</span>
+              <h4>Halal Industry — Use of Technology in the Halal Industry</h4>
+              <p class="pub-role">Author · ISBN: 978-623-88550-0-1</p>
+            </div>
+          </div>
+          <div class="pub-item glass" data-aos>
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <span class="pub-index book">Book Chapter</span>
+              <h4>Is Monolayer Silicene Stable? Simulation Using First-Principles</h4>
+              <p class="pub-role">Co-Author · SDGs Book</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IPR -->
+      <div class="pub-section">
+        <h3 class="pub-section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Intellectual Property Rights (IPR)
+        </h3>
+        <div class="ipr-grid">
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge patent">Patent</div>
+            <h4>Kompor Multi Bahan Bakar Untuk Biomassa dan Oli Bekas</h4>
+            <p class="ipr-id">S00202413448</p>
+            <div class="ipr-status granted">GRANTED · 2025</div>
+          </div>
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge copyright">Copyright</div>
+            <h4>Algoritma Point to Point Navigation AGV</h4>
+            <p class="ipr-id">000572647</p>
+            <div class="ipr-status granted">GRANTED · 2023</div>
+          </div>
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge copyright">Copyright</div>
+            <h4>WeightSense: Waste Monitoring Algorithm</h4>
+            <p class="ipr-id">000571916</p>
+            <div class="ipr-status granted">GRANTED · 2023</div>
+          </div>
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge copyright">Copyright</div>
+            <h4>MySmartRecycleBin — IoT & Big Data Waste Management</h4>
+            <p class="ipr-id">000548016</p>
+            <div class="ipr-status granted">GRANTED · 2023</div>
+          </div>
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge copyright">Copyright</div>
+            <h4>Database Design — "My Medicine" Android App</h4>
+            <p class="ipr-id">000374119</p>
+            <div class="ipr-status granted">GRANTED · 2022</div>
+          </div>
+          <div class="ipr-card glass" data-aos>
+            <div class="ipr-badge copyright">Copyright</div>
+            <h4>SIPaH — Waste Management Information System</h4>
+            <p class="ipr-id">000392542</p>
+            <div class="ipr-status granted">GRANTED · 2022</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="contact-bg">
+      <div class="orb orb-4"></div>
+      <div class="orb orb-5"></div>
+    </div>
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">07 — Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">I'm always open for research collaborations, project discussions, or academic
+          partnerships. Feel free to reach out.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item glass">
+            <div class="contact-icon">📧</div>
+            <div>
+              <span class="contact-label">Email (Academic)</span>
+              <a href="mailto:feri@unu-jogja.ac.id" class="contact-value">feri@unu-jogja.ac.id</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <span class="contact-label">Email (Personal)</span>
+              <a href="mailto:feri.febria@gmail.com" class="contact-value">feri.febria@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon">📱</div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="https://wa.me/6285155405657" class="contact-value">+62 851-5540-5657</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <span class="contact-label">Website</span>
+              <a href="https://vnot.my.id" class="contact-value" target="_blank">vnot.my.id</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/vnot01" class="contact-value" target="_blank">github.com/vnot01</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon">📍</div>
+            <div>
+              <span class="contact-label">Address</span>
+              <span class="contact-value address">Jl. Panembahan No 21, Perumahan Green Mutiara Java, Guwosari, 55751,
+                Bantul, Yogyakarta</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-profile glass">
+          <div class="contact-profile-img">
+            <img src="../me.jpg" alt="Feri Febria Laksana" />
+          </div>
+          <h3>Feri Febria Laksana</h3>
+          <p class="contact-profile-title">S.Kom., M.Kom.</p>
+          <p class="contact-profile-desc">Lecturer · Researcher · Developer</p>
+          <div class="contact-excellence">
+            <span class="excellence-tag">Creative</span>
+            <span class="excellence-tag">Fast Learner</span>
+            <span class="excellence-tag">Critical Thinking</span>
+            <span class="excellence-tag">Flexibility</span>
+          </div>
+          <div class="contact-hobbies">
+            <span class="hobby-item">🏊 Swimming</span>
+            <span class="hobby-item">🏸 Badminton</span>
+            <span class="hobby-item">📖 Reading</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">FL<span class="dot">.</span></span>
+        <p class="footer-text">© 2026 Feri Febria Laksana · Crafted with <span class="heart">♥</span> in Yogyakarta</p>
+        <div class="footer-socials">
+          <a href="https://scholar.google.com/citations?user=fzIebPMAAAAJ" class="social-link"
+            aria-label="Google Scholar" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+            </svg>
+          </a>
+          <a href="https://vnot.my.id" class="social-link" aria-label="Website" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
