@@ -1449,3 +1449,25 @@ body:hover .cursor-glow { opacity: 1; }
   .stat-num { font-size: 1.4rem; }
   .metrics-bar { grid-template-columns: 1fr; }
 }
+
+/* === LEGAL FOOTER LINKS === */
+.footer-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 8px 0;
+}
+.footer-link {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.footer-link:hover {
+  color: var(--accent);
+}
+.footer-divider {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  opacity: 0.5;
+}
+
