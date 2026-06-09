@@ -1451,11 +1451,11 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 /* === LEGAL FOOTER LINKS === */
-.footer-links {
-  display: flex;
-  gap: 16px;
+.footer-meta-links {
+  margin-left: 8px;
+  display: inline-flex;
   align-items: center;
-  margin: 8px 0;
+  gap: 6px;
 }
 .footer-link {
   font-size: 0.78rem;
@@ -1468,6 +1468,6 @@ body:hover .cursor-glow { opacity: 1; }
 .footer-divider {
   color: var(--text-muted);
   font-size: 0.78rem;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
